@@ -28,4 +28,24 @@ conn.commit()
 # 关闭连接
 conn.close()
 ```
-  # python连接oracle > 下载对应版本的cx_Oracle。具体步骤如下 > 1. 引用cx_Oracle 2. 连接数据库 3. 获取cursor 4. 使用cursor进行各种操作 5. 关闭cursor 6. 关闭连接 **例子如下:** ``` import cx_Oracle conn = cx_Oracle.connect('用户名/密码@主机/数据库') c = conn.cursor() x = c.execute('select * from test1') # 输出查询结果-->先进先出 x.fetchone() c.close() conn.close() ``` 
+# python连接oracle 
+> 下载对应版本的cx_Oracle。具体步骤如下 
+> 
+1. 引用cx_Oracle 
+2. 连接数据库 
+3. 获取cursor 
+4. 使用cursor进行各种操作 
+5. 关闭cursor 
+6. 关闭连接 
+
+**例子如下:** 
+```python 
+import cx_Oracle 
+conn = cx_Oracle.connect('用户名/密码@主机/数据库') 
+c = conn.cursor() 
+x = c.execute('select * from test1') 
+# 输出查询结果-->先进先出 
+x.fetchone() 
+c.close() 
+conn.close() 
+``` 
